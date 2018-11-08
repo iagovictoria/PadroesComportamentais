@@ -6,6 +6,12 @@ package Exec_3_2;
  * @author http://www.cs.princeton.edu/introcs/42sort/
  */
 public class QuickSort extends Sort{
+	private double[] a;
+	
+	public QuickSort(double[] a) {
+		this.a = a;
+	}
+	
 	// shuffle the array a
 	public void shuffle(double[] a) {
 		int N = a.length;
@@ -20,7 +26,8 @@ public class QuickSort extends Sort{
 	/****************************************************************************************************************
 	 * Quicksort code from Sedgewick 7.1, 7.2.
 	 ***************************************************************************************************************/
-	public void sort(double[] a) {
+	public void sort() {
+		double[] a = this.a;
 		shuffle(a); // to guard against worst-case
 		sort(a, 0, a.length - 1);
 	}

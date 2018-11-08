@@ -6,7 +6,14 @@ package Exec_3_2;
  * @author http://www.cs.princeton.edu/introcs/42sort/
  */
 public class InsertionSort extends Sort{
-	public void sort(double[] a) {
+	private double[] a;
+	
+	public InsertionSort(double[] a) {
+		this.a = a;
+	}
+	
+	public void sort() {
+		double[] a = this.a;
 		int N = a.length;
 		for (int i = 0; i < N; i++)
 			for (int j = i; j > 0; j--)

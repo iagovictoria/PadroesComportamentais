@@ -7,32 +7,32 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
+		double[] vet = {8,5,7,4,6,1,};
+		double[] vet2 = {8,18,12,11,17,14,15,10,13};
+		double[] vet3 = {8,5,7,4,6,1,2,9,3,18,12,11,17,14,15,19,15,10,0,13};
 		ContextSort cs = new ContextSort();
-		Sort bs = new BubbleSort();
-		Sort is = new InsertionSort();
-		Sort qs = new QuickSort();
+		Sort bs = new BubbleSort(vet, 6);
+		Sort is = new InsertionSort(vet2);
+		Sort qs = new QuickSort(vet3);
 		
-		double[] vet = {8,5,7,4,6,1,2,9,3,18,12,11,17,14,15,19,15,10,0,13};
-		cs.imprimeBubble((BubbleSort) bs, vet, 20);
 		
+		cs.ordenar(bs);
 		for(int cont = 0; cont < vet.length; cont++ ) {
 			System.out.println(vet[cont]);
 		}
 		
-		double[] vet2 = {8,5,7,4,6,1,2,9,3,18,12,11,17,14,15,19,15,10,0,13};
-		cs.imprimeInsertion((InsertionSort) is, vet2);
+		System.out.println("-------------------------");
 		
+		cs.ordenar(is);
 		for(int cont = 0; cont < vet2.length; cont++ ) {
 			System.out.println(vet2[cont]);
 		}
-		
-		double[] vet3 = {8,5,7,4,6,1,2,9,3,18,12,11,17,14,15,19,15,10,0,13};
-		cs.imprimeQuick((QuickSort) qs, vet3);
-		
+		System.out.println("-------------------------");
+		cs.ordenar(qs);
 		for(int cont = 0; cont < vet3.length; cont++ ) {
 			System.out.println(vet3[cont]);
 		}
-
+		System.out.println("-------------------------");
 	}
 
 }

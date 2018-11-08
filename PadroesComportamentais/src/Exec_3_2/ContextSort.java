@@ -6,16 +6,7 @@ public class ContextSort {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public void imprimeBubble(BubbleSort bub, double[] vet, int n) {
-		bub.sort(vet, n);
+	public void ordenar(Sort s) {
+		s.sort();
 	}
-	
-	public void imprimeInsertion(InsertionSort is, double[] vet) {
-		is.sort(vet);
-	}
-	
-	public void imprimeQuick(QuickSort qs, double[] vet) {
-		qs.sort(vet);
-	}
-
 }
